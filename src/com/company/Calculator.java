@@ -1,8 +1,11 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Calculator {
 
     public static void main(String[] args) {
+    	/*-
 	int time=8;
 	int ID;
 	int salary;
@@ -28,6 +31,8 @@ public class Calculator {
 		ID=11;
 		ID=50;
 		ID=53;
+		salary="hourly rate"*"numbers of hours worked";
+		System.out.println("salary");
 		System.out.println("String FirstName1=I");
 		System.out.println("String LasttName1=Ia");
 		System.out.println("String FirstName2=D");
@@ -45,9 +50,22 @@ public class Calculator {
 		System.out.println("ID=11);
 				System.out.println("ID=50");
 		System.out.println("ID=53");
+*/
+		Payment[] empl={
+		new ContractEmployee(1,"Ivan",10),
+		new SalaryEmployee(2,"Petro",40),
+				new ContractEmployee(1,"Ira",8),
+				new SalaryEmployee(2,"D",20),
+		};
 
-
-
+for(Payment current: empl){
+	System.out.println("salary="+current.calculatePay()+" for empl:"+current);
+}
+Arrays.sort(empl);
+System.out.println("sort:");
+		for(Payment current: empl){
+			System.out.println("salary="+current.calculatePay()+" for empl:"+current);
+		}
 
 	}
 }
